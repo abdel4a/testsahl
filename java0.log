@@ -1,0 +1,58 @@
+Nov 21, 2023 1:28:53 PM biz.ganttproject.LoggerImpl debug
+FINE: Creating main frame...
+Nov 21, 2023 1:28:53 PM biz.ganttproject.LoggerImpl debug
+FINE: 1. loading look'n'feels
+Nov 21, 2023 1:28:53 PM biz.ganttproject.LoggerImpl debug
+FINE: 2. loading options
+Nov 21, 2023 1:28:53 PM biz.ganttproject.LoggerImpl debug
+FINE: 3. creating menus...
+Nov 21, 2023 1:28:54 PM biz.ganttproject.LoggerImpl debug
+FINE: 4. creating views...
+Nov 21, 2023 1:28:54 PM biz.ganttproject.LoggerImpl debug
+FINE: 5. calculating size and packing...
+Nov 21, 2023 1:28:54 PM biz.ganttproject.LoggerImpl debug
+FINE: 6. changing language ...
+Nov 21, 2023 1:28:54 PM biz.ganttproject.LoggerImpl debug
+FINE: 7. first attempt to restore bounds
+Nov 21, 2023 1:28:54 PM biz.ganttproject.LoggerImpl debug
+FINE: 8. finalizing...
+Nov 21, 2023 1:28:54 PM com.bardsoftware.eclipsito.update.UpdaterImpl lambda$getUpdateMetadata$2
+SEVERE: Failed to fetch updates from https://www.ganttproject.biz/dl/updates/ganttproject-3.0.json
+java.util.concurrent.CompletionException: java.net.ConnectException
+	at java.base/java.util.concurrent.CompletableFuture.encodeRelay(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.uniComposeStage(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.thenCompose(Unknown Source)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(Unknown Source)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsyncImpl$7(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.uniHandleStage(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.handle(Unknown Source)
+	at java.net.http/jdk.internal.net.http.MultiExchange.responseAsyncImpl(Unknown Source)
+	at java.net.http/jdk.internal.net.http.MultiExchange.lambda$responseAsync0$2(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture.postComplete(Unknown Source)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncSupply.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+Caused by: java.net.ConnectException
+	at java.net.http/jdk.internal.net.http.common.Utils.toConnectException(Unknown Source)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.connectAsync(Unknown Source)
+	at java.net.http/jdk.internal.net.http.AsyncSSLConnection.connectAsync(Unknown Source)
+	at java.net.http/jdk.internal.net.http.Http2Connection.createAsync(Unknown Source)
+	at java.net.http/jdk.internal.net.http.Http2ClientImpl.getConnectionFor(Unknown Source)
+	at java.net.http/jdk.internal.net.http.ExchangeImpl.get(Unknown Source)
+	at java.net.http/jdk.internal.net.http.Exchange.establishExchange(Unknown Source)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl0(Unknown Source)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsyncImpl(Unknown Source)
+	at java.net.http/jdk.internal.net.http.Exchange.responseAsync(Unknown Source)
+	... 13 more
+Caused by: java.nio.channels.UnresolvedAddressException
+	at java.base/sun.nio.ch.Net.checkAddress(Unknown Source)
+	at java.base/sun.nio.ch.SocketChannelImpl.connect(Unknown Source)
+	at java.net.http/jdk.internal.net.http.PlainHttpConnection.lambda$connectAsync$0(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	... 22 more
+
+Nov 21, 2023 2:34:56 PM net.sourceforge.ganttproject.GPLogger log
+INFO: [GanttOptions] save(): finished!!
